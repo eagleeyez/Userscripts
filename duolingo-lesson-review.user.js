@@ -288,13 +288,14 @@ function init(){
             $('#prev-arrow, #next-arrow').remove();
             var arrow = $('<span></span>').css({
                 background: 'url("//d7mj4aqfscim2.cloudfront.net/images/sprite_mv_082bd900117422dec137f596afcc1708.png") no-repeat',
-                width: '24px', height: '18px', float: 'left', 'pointer-events':'none', 'background-position': '-323px -130px'
+                width: '24px', height: '18px', float: left; 'pointer-events':'none', 'background-position': '-323px -130px'
             });
             
             $.each(['prev', 'next'], function(i, val){
                 var rotate = 'rotate('+(val==='prev'?'-':'')+'90deg)';
                 arrow.clone().attr('id', val +'-arrow').css({
-                    margin: '23px 0px 10px' + (val==='prev' ?' 220px': ''),
+                    float: (val==='prev' ?' right': ''),
+                    margin: '23px 0px 10px' + (val==='prev' ?' -24px': ''),
                     transform: rotate, '-webkit-transform': rotate
                 })[(val==='prev' ? 'prepend' : 'append') + 'To']('#progress-bar');
             });
