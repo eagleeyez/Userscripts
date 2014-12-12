@@ -11,7 +11,7 @@
 Copyright (c) 2013-2014 HodofHod (https://github.com/HodofHod)
 
 Licensed under the MIT License (MIT)
-Full text of the license is available at https://raw2.github.com/HodofHod/Userscripts/master/LICENSE
+Full text of the license is available at https://raw2.github.com/eagleeyez/Userscripts/master/LICENSE
 */
 
 function inject(f) {
@@ -57,7 +57,7 @@ function main(){
             document.head.appendChild(script);
         }
         
-        var base = ['//rawgithub.com/HodofHod/Userscripts/master/', '.user.js'];
+        var base = ['//rawgithub.com/eagleeyez/Userscripts/master/', '.user.js'];
         $.each(scripts, function(title, val){
             var esc_name = val.id;
             if (getCookie(esc_name) !== 'false' && !$('script[name='+esc_name+']')[0]){
