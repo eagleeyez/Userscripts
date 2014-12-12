@@ -2,9 +2,9 @@
 // @name         Duolingo Mods
 // @description  Includes Lesson Review, Easy Accents, and other miscellaneous mods.
 // @match        *://www.duolingo.com/*
-// @author       HodofHod
+// @author       HodofHod mod by eagleeyez
 // @namespace    HodofHod
-// @version      0.3.2
+// @version      0.3.2.1
 // ==/UserScript==
 
 /*
