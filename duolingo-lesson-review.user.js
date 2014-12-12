@@ -2,16 +2,16 @@
 // @name         Duolingo - Lesson Review
 // @description  This script allows you to go back and review all the different challenges in a lesson.
 // @match        *://www.duolingo.com/*
-// @author       HodofHod
+// @author       HodofHod - fixed by eagleeyez
 // @namespace    HodofHod
-// @version      0.2.3.1
+// @version      0.2.3
 // ==/UserScript==
 
 /*
 Copyright (c) 2013-2014 HodofHod (https://github.com/HodofHod)
 
 Licensed under the MIT License (MIT)
-Full text of the license is available at https://raw2.github.com/HodofHod/Userscripts/master/LICENSE
+Full text of the license is available at https://raw2.github.com/eagleeyez/Userscripts/master/LICENSE
 */
 
 //TODO: Inject a stylesheet and use classes instead of .css()?
@@ -288,14 +288,13 @@ function init(){
             $('#prev-arrow, #next-arrow').remove();
             var arrow = $('<span></span>').css({
                 background: 'url("//d7mj4aqfscim2.cloudfront.net/images/sprite_mv_082bd900117422dec137f596afcc1708.png") no-repeat',
-                width: '24px', height: '18px', float: 'left'; 'pointer-events':'none', 'background-position': '-323px -130px'
+                width: '24px', height: '18px', float: 'right', 'pointer-events':'none', 'background-position': '-323px -130px'
             });
             
             $.each(['prev', 'next'], function(i, val){
                 var rotate = 'rotate('+(val==='prev'?'-':'')+'90deg)';
                 arrow.clone().attr('id', val +'-arrow').css({
-                    float: (val==='prev' ?' right': ''),
-                    margin: '23px 0px 10px' + (val==='prev' ?' -24px': ''),
+                    margin: (val==='prev'?'24px 100px 0px -80px':'') || (val==='next'?'24px 0px 0px 0px':''),
                     transform: rotate, '-webkit-transform': rotate
                 })[(val==='prev' ? 'prepend' : 'append') + 'To']('#progress-bar');
             });
