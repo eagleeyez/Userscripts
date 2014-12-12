@@ -288,7 +288,7 @@ function init(){
             $('#prev-arrow, #next-arrow').remove();
             var arrow = $('<span></span>').css({
                 background: 'url("//d7mj4aqfscim2.cloudfront.net/images/sprite_mv_082bd900117422dec137f596afcc1708.png") no-repeat',
-                width: '24px', height: '18px', float: left; 'pointer-events':'none', 'background-position': '-323px -130px'
+                width: '24px', height: '18px', float: 'left'; 'pointer-events':'none', 'background-position': '-323px -130px'
             });
             
             $.each(['prev', 'next'], function(i, val){
