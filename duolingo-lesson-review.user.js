@@ -294,7 +294,7 @@ function init(){
             $.each(['prev', 'next'], function(i, val){
                 var rotate = 'rotate('+(val==='prev'?'-':'')+'90deg)';
                 arrow.clone().attr('id', val +'-arrow').css({
-                    margin: '31px 0 0' + (val==='prev' ?' -15px': ''),
+                    margin: '23px 0px 10px' + (val==='prev' ?' 220px': ''),
                     transform: rotate, '-webkit-transform': rotate
                 })[(val==='prev' ? 'prepend' : 'append') + 'To']('#progress-bar');
             });
